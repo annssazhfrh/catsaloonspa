@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<h1 align="center"> ABOUT US</h1>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>About Us</title>
+    
+<link rel="stylesheet" href="aboutus.css">
+    
+<script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+<div class="container">
+    <div class="crew">
+        <div class="crew-text">
+		
+		    <div class="user-text">
+               <i class="fas fa-quote-left"></i>
+               <p>Cat Saloon and Spa was founded in 2020. Cat Saloon and spa is for all kind of cats! We offered few important packages for cat with great deals. Cat saloon & spa is already been operation for almost three years now. We sure the cats need "me time" too. We offered the best treatments for the cats!</p>
+               <span>Cat Saloon & Spa</span>
+            </div>
+			
+		
+            <div class="user-text">
+               <i class="fas fa-quote-left"></i>
+               <p>Since small, Annessa Zhafirah always wanted to have cat business and she loves going to saloon & spa for her me time. After finishing her Diploma, she was thinking about opening Saloon for animals. Finally, she came out with opening Cat Saloon & Spa since she loves cats.</p>
+               <span>ANNESSA ZHAFIRAH</span>
+			   <p>FOUNDER</p>
+            </div>
+			
+            <div class="user-text">
+               <i class="fas fa-quote-left"></i>
+               <p>Co-founder of Cat Saloon & Spa Anna Syazliana has been appointed as the Co-Founder of the company since 1st September 2020. She too, a cat lover eventhough she was cnonstantly scratched, her love towards cats did not shift an inch.</p>
+               <span>ANNA SYAZLIANA</span>
+			   <p>CO-FOUNDER</p>
+            </div>
+			
+            <div class="user-text">
+               <i class="fas fa-quote-left"></i>
+               <p>One of our best crew that great with cats. Miss Khan has a basic knowledge in handling animals especially cats. She own more than 20 cats at her house. Sometimes cat can be very cracky especially to strangers, but nothing to worry about to send your cat to our saloon because Miss Khan is very expert in handling cats.</p>
+               <span>MISS KHAN</span>
+			   <p>CREW</p>
+            </div>
+        </div>
+		
+        <div class="picture">
+		   <img src="catlogo1.png" class="user-pic" onclick="showReview()">
+           <img src="aza.jpeg" class="user-pic" onclick="showReview()">
+           <img src="asa.jpeg" class="user-pic" onclick="showReview()">
+           <img src="lmk.jpg" class="user-pic" onclick="showReview()">
+        </div>
+    </div>
+</div>
+
+
+<!----------Java Scripting---------->
+<script>
+    let userTexts = document.getElementsByClassName("user-text");
+    let userPics = document.getElementsByClassName("user-pic");
+
+    function showReview(){
+        for(userPic of userPics){
+            userPic.classList.remove("active-pic");
+        }
+        for(userText of userTexts){
+            userText.classList.remove("active-text");
+        }
+        let i = Array.from(userPics).indexOf(event.target);
+
+        userPics[i].classList.add("active-pic");
+        userTexts[i].classList.add("active-text");
+    }
+
+</script>
+
+
+</body>
+</html>
